@@ -219,7 +219,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <body>
 <canvas id="brilhos" aria-hidden="true"></canvas>
 
-<div class="aviso-topo" id="avisoTopo">Black Friday EletroHouse: seu preço fica reservado por <b id="topoT">30:00</b></div>
+<div class="aviso-topo" id="avisoTopo">Black Friday EletroHouse: oferta definitiva, preço de <b>R$ 49,90</b></div>
 
 <header>
   <div class="wrap hd">
@@ -248,19 +248,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <div class="cordao"></div>
         <div class="etiqueta" id="etiqueta">
           <span class="furo"></span>
-          <span class="lacre" id="lacre">-62%</span>
+          <span class="lacre" id="lacre">-61%</span>
           <div class="nome">Árvore Pinheiro Canadense 1,50m</div>
           <div class="de">de <s>R$ 127,00</s> por</div>
-          <div class="por" id="preco"><small>R$</small>47,90</div>
+          <div class="por" id="preco"><small>R$</small>49,90</div>
           <div class="fio"></div>
-          <div class="rotulo" id="rotulo">Seu preço fica reservado por</div>
-          <div class="relogio" role="timer" aria-live="off" aria-label="Tempo restante da oferta">
-            <div class="flip" id="m1"><span>3</span></div><div class="flip" id="m2"><span>0</span></div>
-            <span class="sep">:</span>
-            <div class="flip" id="s1"><span>0</span></div><div class="flip" id="s2"><span>0</span></div>
-          </div>
+          <div class="rotulo" id="rotulo">Oferta definitiva de Black Friday</div>
           <button class="btn-ouro" onclick="addArvore(event)"><span>Garantir a minha árvore</span></button>
-          <p class="nota" id="nota">Estoque bem pequeno. Quando o tempo acaba, volta para R$ 127,00.</p>
+          <p class="nota" id="nota">Estoque bem pequeno. Preço fixo, sem pegadinha.</p>
         </div>
       </div>
     </div>
@@ -304,7 +299,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
           <div><dt>Altura</dt><dd><b>1,50m</b>Cabe na sala, na varanda ou na vitrine da loja</dd></div>
           <div><dt>Galhos</dt><dd><b>520</b>Árvore cheia, sem buracos aparecendo</dd></div>
           <div><dt>Base</dt><dd><b>Pé de ferro</b>Em X, firme pra pendurar enfeites</dd></div>
-          <div><dt>Preço</dt><dd><b id="fichaPreco">R$ 47,90</b>Oferta de Black Friday (preço normal R$ 127,00)</dd></div>
+          <div><dt>Preço</dt><dd><b id="fichaPreco">R$ 49,90</b>Oferta definitiva de Black Friday (preço normal R$ 127,00)</dd></div>
         </dl>
         <button class="btn-ouro" style="max-width:360px" onclick="addArvore(event)"><span>Colocar na sacola</span></button>
       </div>
@@ -327,7 +322,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <div class="wrap">
       <div class="cab"><h2>Dúvidas</h2></div>
       <div class="faq">
-        <details><summary>Por que o preço tem cronômetro?</summary><p>É a oferta de Black Friday. Quando você entra no site, o preço de R$ 47,90 fica reservado pra você por 30 minutos. Quando o tempo acaba, volta para R$ 127,00.</p></details>
+        <details><summary>A oferta acaba?</summary><p>O preço de R$ 49,90 é definitivo e não tem cronômetro. O estoque é pequeno, então ele pode acabar.</p></details>
         <details><summary>Tem muitas unidades?</summary><p>Não. O estoque dessa árvore é bem pequeno e a oferta vale enquanto tiver unidade.</p></details>
         <details><summary>Como funciona a entrega?</summary><p>Depois da compra, a gente confirma o envio e passa o prazo para o seu CEP.</p></details>
         <details><summary>Como eu pago?</summary><p>Na última etapa do checkout, em ambiente seguro.</p></details>
@@ -340,7 +335,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <footer><div class="wrap"><span class="marca" style="font-size:24px">Eletro<span>House</span></span><span>Suporte: <a href="mailto:eletrohouse@hotmail.com" style="color:var(--ouro2)">eletrohouse@hotmail.com</a></span><span>Preços e estoque sujeitos a alteração.</span><p style="flex-basis:100%;font-size:13px;max-width:80ch">Produto em promoção de Black Friday: não fazemos troca por preferência (gosto, cor ou modelo). Como manda a lei, você pode desistir da compra em até 7 dias depois de receber (art. 49 do Código de Defesa do Consumidor), e produto com defeito tem troca garantida. É só falar com o suporte.</p></div></footer>
 
 <div class="fixa" id="fixa">
-  <div class="p"><b id="fixaP">R$ 47,90</b><small id="fixaT">reservado por 30:00</small></div>
+  <div class="p"><b id="fixaP">R$ 49,90</b><small id="fixaT">oferta definitiva</small></div>
   <button class="btn-ouro" onclick="addArvore(event)"><span>Garantir a minha</span></button>
 </div>
 
@@ -362,33 +357,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 /* ===== CONFIGURAÇÃO ===== */
 const MINUTOS_OFERTA = 30;
 const PRODUTOS = {
-  arvore:{id:'arvore',nome:'Árvore de Natal Pinheiro Canadense Verde 1,50m · 520 galhos · pé de ferro',curto:'Árvore Pinheiro Canadense 1,50m',preco:127.00,oferta:47.90,img:'arvore.png'}
+  arvore:{id:'arvore',nome:'Árvore de Natal Pinheiro Canadense Verde 1,50m · 520 galhos · pé de ferro',curto:'Árvore Pinheiro Canadense 1,50m',preco:127.00,oferta:49.90,img:'arvore.png'}
 };
 
 const $=id=>document.getElementById(id);
 const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 const guarda={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 
-/* ===== cronômetro por visitante: quando zera, o preço volta de verdade ===== */
-let fim=guarda.get('eh_fim',0);
-if(!fim){fim=Date.now()+MINUTOS_OFERTA*60000;guarda.set('eh_fim',fim)}
-const ofertaAtiva=()=>Date.now()<fim;
-const precoAtual=p=>(p.oferta&&ofertaAtiva())?p.oferta:p.preco;
-const ult={};
-function poeDigito(id,d){if(ult[id]===d)return;ult[id]=d;const el=$(id);el.classList.remove('vira');void el.offsetWidth;el.classList.add('vira');setTimeout(()=>el.firstChild.textContent=d,220)}
-function tick(){
-  const r=Math.max(0,fim-Date.now()),m=String(Math.floor(r/60000)).padStart(2,'0'),s=String(Math.floor(r%60000/1000)).padStart(2,'0');
-  poeDigito('m1',m[0]);poeDigito('m2',m[1]);poeDigito('s1',s[0]);poeDigito('s2',s[1]);
-  if(r>0){$('topoT').textContent=m+':'+s;$('fixaT').textContent='reservado por '+m+':'+s;return}
-  clearInterval(tm);
-  $('etiqueta').classList.add('acabou');$('lacre').style.display='none';
-  $('preco').innerHTML='<small>R$</small>127,00';$('fichaPreco').textContent='R$ 127,00';
-  $('rotulo').textContent='A oferta de Black Friday acabou';$('nota').textContent='O preço voltou para R$ 127,00.';
-  $('avisoTopo').textContent='A oferta de Black Friday acabou pra você';
-  $('fixaP').textContent='R$ 127,00';$('fixaT').textContent='oferta encerrada';
-  render();
-}
-const tm=setInterval(tick,1000);tick();
+const ofertaAtiva=()=>true;
+const precoAtual=p=>p.oferta||p.preco;
 
 /* ===== sacola ===== */
 let cart=guarda.get('eh_cart',{});
@@ -422,7 +399,7 @@ function telaCheckout(){
   if(passo===1)h+=`<p class="passo-t">Seus dados</p>${campo('nome','Nome completo','text','autocomplete="name"')}${campo('email','E-mail','email','autocomplete="email"')}${campo('fone','WhatsApp com DDD','tel','autocomplete="tel" placeholder="(00) 00000-0000"')}<div class="erro" id="err"></div><button class="btn-ouro" onclick="avancar()"><span>Continuar</span></button>`;
   if(passo===2)h+=`<p class="passo-t">Endereço de entrega</p><div class="duas">${campo('cep','CEP','text','inputmode="numeric" autocomplete="postal-code" onblur="buscaCep(this.value)"')}${campo('num','Número')}</div>${campo('rua','Rua')}${campo('bairro','Bairro')}<div class="duas">${campo('cidade','Cidade')}${campo('uf','Estado')}</div>${campo('comp','Complemento (opcional)')}<div class="erro" id="err"></div><button class="btn-ouro" onclick="avancar()"><span>Continuar</span></button><button class="btn-sec" onclick="passo=1;telaCheckout()">Voltar</button>`;
   if(passo===3)h+=`<p class="passo-t">Pagamento</p>${Object.keys(cart).map(id=>`<div class="linha-v"><span>${cart[id]}× ${PRODUTOS[id].curto}</span><span>${brl(precoAtual(PRODUTOS[id])*cart[id])}</span></div>`).join('')}<div class="linha-v"><span>Entrega</span><span>${dados.cidade||''} ${dados.uf||''}</span></div><div class="linha-v tot"><span>Total</span><span>${brl(sub)}</span></div><div class="erro" id="err"></div><button class="btn-ouro" onclick="pagar(event)"><span>Ir para o pagamento</span></button><button class="btn-sec" onclick="passo=2;telaCheckout()">Voltar</button>`;
-  if(passo===4)h+=`<div class="ok"><h3>Pedido registrado</h3><p style="color:var(--musgo)">Recebemos seu pedido. A gente fala com você no WhatsApp <b style="color:var(--champ)">${dados.fone||''}</b> pra finalizar o pagamento. Dúvidas: <a href="mailto:eletrohouse@hotmail.com" style="color:var(--ouro2)">eletrohouse@hotmail.com</a></p><button class="btn-ouro" onclick="fecharTudo()"><span>Voltar pra loja</span></button></div>`;
+  if(passo===4)h+=`<div class="ok"><h3>Pedido registrado</h3><p style="color:var(--musgo)">Obrigado pela compra! Você recebe a confirmação do Mercado Pago por e-mail e a gente avisa sobre a entrega. Dúvidas: <a href="mailto:eletrohouse@hotmail.com" style="color:var(--ouro2)">eletrohouse@hotmail.com</a></p><button class="btn-ouro" onclick="fecharTudo()"><span>Voltar pra loja</span></button></div>`;
   $('mc').innerHTML=h;
 }
 function lerCampos(){document.querySelectorAll('#mc input').forEach(i=>dados[i.id]=i.value.trim());guarda.set('eh_dados',dados)}
@@ -447,8 +424,18 @@ async function buscaCep(v){
 function pedidoAtual(){const{sub}=totais();return{itens:Object.keys(cart).map(id=>({id,nome:PRODUTOS[id].nome,qtd:cart[id],preco:precoAtual(PRODUTOS[id])})),total:+sub.toFixed(2),cliente:dados,criado:new Date().toISOString()}}
 /* >>> GATEWAY: troque o conteúdo desta função pela chamada do gateway (criar cobrança PIX/cartão e redirecionar). <<< */
 async function pagar(ev){
-  const pedido=pedidoAtual();guarda.set('eh_ultimo_pedido',pedido);console.log('Pedido pronto para o gateway:',pedido);
-  cart={};salvar();passo=4;telaCheckout();if(ev)brilho(ev.clientX,ev.clientY);
+  const pedido=pedidoAtual();guarda.set('eh_ultimo_pedido',pedido);
+  const e=$('err');if(e)e.textContent='';
+  const bt=ev&&ev.currentTarget;if(bt)bt.disabled=true;
+  try{
+    const r=await fetch('/api/pagar',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({itens:pedido.itens,cliente:dados})});
+    const j=await r.json();
+    if(!r.ok||!j.url)throw new Error(j.erro||'falha');
+    location.href=j.url;
+  }catch(err){
+    if(bt)bt.disabled=false;
+    if(e)e.textContent='Não deu pra abrir o pagamento agora. Tente de novo em instantes.';
+  }
 }
 
 /* ===== galeria ===== */
@@ -470,6 +457,10 @@ function brilho(x,y){if(matchMedia('(prefers-reduced-motion: reduce)').matches)r
 function anima(){cx.clearRect(0,0,cv.width,cv.height);pts=pts.filter(p=>p.v-->0);for(const p of pts){p.vy+=.12;p.vx*=.97;p.x+=p.vx;p.y+=p.vy;cx.globalAlpha=Math.min(1,p.v/40);cx.fillStyle=p.r>2?'#E9CF94':'#C8A15A';cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fill()}cx.globalAlpha=1;if(pts.length)requestAnimationFrame(anima);else{on=false;cx.clearRect(0,0,cv.width,cv.height)}}
 
 render();
+
+// retorno do Mercado Pago
+(()=>{const q=new URLSearchParams(location.search).get('pago');if(!q)return;history.replaceState(null,'',location.pathname);
+ if(q==='1'||q==='pendente'){cart={};salvar();$('veu').classList.add('on');$('modal').classList.add('on');passo=4;telaCheckout();}})();
 </script>
 </body>
 </html>
