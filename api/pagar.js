@@ -1,7 +1,7 @@
 // Vercel serverless: cria preferência do Mercado Pago (Checkout Pro).
 // O Access Token fica SÓ em process.env.MP_ACCESS_TOKEN (nunca no front).
 const PRODUTOS = {
-  arvore: { nome: 'Árvore de Natal Pinheiro Canadense Verde 1,50m', preco: 127.0, oferta: 49.9 },
+  arvore: { nome: 'Árvore de Natal Pinheiro Canadense Verde 1,50m', preco: 189.9, oferta: 49.9 },
 };
 
 module.exports = async (req, res) => {
